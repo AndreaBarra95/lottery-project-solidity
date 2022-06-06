@@ -26,7 +26,7 @@ contract Lottery {
 
     //This function will pick a winner from the players array.
     //It picks a single random index which identifies the winner and this last will receive the ethers
-    function pickWinner() private restricted {
+    function pickWinner() external restricted {
         //generating a uint number using the random function modulo array size
         uint index = random() % players.length;
         //send ethers to the winner at the position = index
